@@ -5,11 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Test Liquibase Action
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Liquibase Github Action
-        uses: liquibase/liquibase-github-action@v1
-        id: liquibase
+      - uses: actions/checkout@v2
+      - uses: liquibase/liquibase-github-action@v1
         with:
           operation: 'update'
           classpath: 'example/changelogs'
