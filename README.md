@@ -30,8 +30,9 @@ CREATE TABLE yourname (
 5. Your commit triggers a build in GitHub and executes Liquibase update!
  https://github.com/liquibase/liquibase-github-action-example/actions
  
+
  If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
- 
+
  # Troubleshooting
  * If your build fails due to a validation error, verify that your changeset author and ID are unique in the changelog. This is the `changeset yourname:yourname1`, where the left side is your author and the right is the changeset ID.
  * If Liquibase Update fails, verify that your table name is unique in the changelog.
@@ -44,4 +45,3 @@ Get support at https://liquibase.com/support
 
 Copyright 2020 Datical, Inc. All rights reserved. The program is subject to the 
 license agreement, copyright, trademark, patent, and other laws.
-
