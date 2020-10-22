@@ -27,3 +27,7 @@ alter table person add column country varchar(2)
 --changeset other.dev:4
 --rollback ALTER TABLE person DROP COLUMN state;
 alter table person add column state varchar(2)
+
+--changeset other.dev:5
+--rollback ALTER TABLE company DROP COLUMN country;
+alter table company add column country varchar(2)
