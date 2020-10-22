@@ -34,6 +34,7 @@ git commit -m "yourname: Adding new changeset for example"
 it push origin <your_branch_name
 ```
 5. Your commit triggers a build in GitHub and executes Liquibase update!
+
  https://github.com/liquibase/liquibase-github-action-example/actions
  
 
