@@ -8,8 +8,9 @@ This example directory is a way to get familiar with how Liquibase Github Action
 
 # How To Run the Example
 
-1. Clone the liquibase-github-action-example repository.
-> git clone git@github.com:liquibase/liquibase-github-action-example.git
+1. Fork and clone the liquibase-github-action-example repository.
+> Fork by clicking the "Fork" button at the top right of the liquibase-github-action-example page.
+> git clone git@github.com:<YOURFORK>/liquibase/liquibase-github-action-example.git
 2. Create a new git branch for your changes.
 > git checkout -b <your_branch_name>
 3. Edit example/changelogs/samplechangelog.h2.sql to add a new changeset. Replace "yourname" with a unique identifier.
@@ -29,6 +30,9 @@ CREATE TABLE yourname (
 5. Your commit triggers a build in GitHub and executes Liquibase update!
  https://github.com/liquibase/liquibase-github-action-example/actions
  
+
+ If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
+
  # Troubleshooting
  * If your build fails due to a validation error, verify that your changeset author and ID are unique in the changelog. This is the `changeset yourname:yourname1`, where the left side is your author and the right is the changeset ID.
  * If Liquibase Update fails, verify that your table name is unique in the changelog.
