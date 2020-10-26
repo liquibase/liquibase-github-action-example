@@ -22,9 +22,9 @@ create table company (
 
 --changeset christine:3
 --rollback ALTER TABLE person DROP COLUMN country;
-alter table person add column country varchar(2)
+alter table person add country varchar(2)
 
 --changeset amy:4
 --rollback ALTER TABLE person DROP COLUMN state;
-alter table person add column state varchar(2)
+alter table person add state varchar(2)
 
