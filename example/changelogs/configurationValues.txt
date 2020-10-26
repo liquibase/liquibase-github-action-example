@@ -1,7 +1,7 @@
 # Set these values in CI/CD configuration to connect to an embedded H2 database and run example
 
-changeLogFile: samplechangelog.h2.sql
-url: jdbc:h2:file:./H2_project/h2tutorial
-username: liqubase
-password: password
+changeLogFile: changelog.sql
+url: jdbc:oracle:thin:@demo-db1-rhel6.datical.net:1521/PP_DEV.datical.net
+username: DATICAL_USER
+password: DATICAL_USER_PW
 logLevel: info
