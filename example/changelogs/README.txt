@@ -17,6 +17,14 @@ Explanation of Files
 ##  Get support at liquibase.com/support          ##
 ####################################################
 
+For working with Oracle:
+
+* JDBC URL follows this format:
+** --url=jdbc:oracle:thin:@<IP OR HOSTNAME>:<PORT>/<SERVICE NAME OR SID>
+** Notice the @ in the URL
+
+* May need to use multiple paths in classpath
+** --classpath=/workspace/example/changelogs:/workspace/example/changelogs/ojdbc8.jar
 
 Copyright 2020 Datical, Inc. All rights reserved. The program is subject to the 
 license agreement, copyright, trademark, patent, and other laws.
