@@ -19,6 +19,8 @@ create table company (
     address2 varchar(50),
     city varchar(30)
 )
+--changeset your.name:3
+create table cc(id int)
 
 --changeset other.dev:3
 --rollback ALTER TABLE person DROP COLUMN country;
