@@ -10,7 +10,7 @@ jobs:
         with:
           operation: 'update'
           classpath: 'example/changelogs'
-          changeLogFile: 'cs.xml'
+          changeLogFile: 'simplechangelog.h2.sql'
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           url: ${{ secrets.URL }}
