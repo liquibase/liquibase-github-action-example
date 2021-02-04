@@ -1,7 +1,10 @@
 # Set these values in CI/CD configuration to connect to an embedded H2 database and run example
+# NOTE: The username is missing the second "i" in Liquibase. liqubase is the correct spelling.
 
-logLevel: info
-changeLogFile: samplechangelog.h2.sql
+operation: 'update'
+classpath: /liquibase/changelog:/liquibase/classpath:/
+changeLogFile: /example/changelogs/samplechangelog.h2.sql
 url: jdbc:h2:file:./H2_project/h2tutorial
 username: liqubase
 password: password
+logLevel: info
