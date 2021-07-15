@@ -33,7 +33,7 @@ CREATE TABLE yourname (
 ```bash
 git add example/changelogs/samplechangelog.h2.sql
 git commit -m "yourname: Adding new changeset for example"
-it push origin <your_branch_name
+git push origin <your_branch_name>
 ```
 5. Your commit triggers a build in GitHub and executes Liquibase update!
 
