@@ -37,7 +37,7 @@ git push origin <your_branch_name>
 ```
 5. Your commit triggers a build in GitHub and executes Liquibase update!
 
- https://github.com/<YOURFORK>/liquibase-github-action-example/actions
+ `https://github.com/<YOURFORK>/liquibase-github-action-example/actions`
  
 
  If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
