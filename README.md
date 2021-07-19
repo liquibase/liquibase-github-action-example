@@ -25,7 +25,7 @@ git checkout -b <your_branch_name>
 --rollback DROP TABLE yourname;
 CREATE TABLE yourname (
     id int primary key,
-    name varchar(50) not null,
+    name varchar(50) not null
 )
 ```
 
