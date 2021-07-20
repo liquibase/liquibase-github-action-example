@@ -42,6 +42,12 @@ git push origin <your_branch_name>
 
  If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
 
+# Additional Examples
+ In addition to the default docker-based example included in the "example" folder this repository also contains additional examples in the "extra" folder.
+ These pertain to various non-docker build systems such as Gradle, NodeJS and Maven, and also showcase a second docker example that doesn't use the official Liquibase action. While the official GitHub Action is the preferred way of implementing docker-based workflows, there may be use-cases requiring custom container images from custom registries. The extra docker example illustrates how this can be done.
+
+ Corresponding GitHub Action workflow (.yml) files for all extra examples can be found in the .github/workflows directory and they must be explicitly enabled for testing.
+
  # Troubleshooting
  * If your build fails due to a validation error, verify that your changeset author and ID are unique in the changelog. This is the `changeset yourname:yourname1`, where the left side is your author and the right is the changeset ID.
  * If Liquibase Update fails, verify that your table name is unique in the changelog.

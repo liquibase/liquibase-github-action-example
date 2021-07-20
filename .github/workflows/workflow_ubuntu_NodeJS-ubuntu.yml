@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Liquibase_NodeJS_GitHub-Hosted
+
+on: [push]
+
+# For more control over when the action will run, comment out (or delete) the above and trigger the workflow on master-branch push or pull request
+# by uncommenting the appropriate section below.
+
+# on:
+#  workflow_dispatch:
+#    inputs:
+#      environment:
+#        description: 'Choose an environment: dev | test | prod'     
+#        required: true
+#        default: 'dev'
+#      tags:
+#        description: 'Test scenario tags'
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  LBJobNodeJS:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      - name: RunLiquibaseCLICommands
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        uses: actions/checkout@v2
+      
+      # Runs a set of commands using the runners shell
+
+      - run: |
+          curl -L https://github.com/liquibase/liquibase/releases/download/v4.2.0/liquibase-4.2.0.zip --output liquibase-4.2.0.zip
+          unzip -o -d liquibase liquibase-4.2.0.zip
+          node --version
+          node extra/NodeJS/liquibase_dev"${{ github.event.inputs.environment }}".js
