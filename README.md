@@ -28,14 +28,15 @@ CREATE TABLE yourname (
     name varchar(50) not null
 )
 ```
+4. Add the the database username, password and url to your [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).  The values to use are in `example/changelogs/configurationValues.txt`
 
-4. Add, commit and push your changes to GitHub.
+5. Add, commit and push your changes to GitHub.
 ```bash
 git add example/changelogs/samplechangelog.h2.sql
 git commit -m "yourname: Adding new changeset for example"
 git push origin <your_branch_name>
 ```
-5. Your commit triggers a build in GitHub and executes Liquibase update!
+6. Your commit triggers a build in GitHub and executes Liquibase update!
 
  `https://github.com/<YOURFORK>/liquibase-github-action-example/actions`
  
