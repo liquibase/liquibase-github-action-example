@@ -1,4 +1,4 @@
-![.github/workflows/example.yml](https://github.com/liquibase/liquibase-github-action-example/workflows/.github/workflows/example.yml/badge.svg)
+[![.github/workflows/example.yml](https://github.com/liquibase/liquibase-github-action-example/actions/workflows/example.yml/badge.svg)](https://github.com/liquibase/liquibase-github-action-example/actions/workflows/example.yml)
 
 # Example Liquibase Github Action
 
