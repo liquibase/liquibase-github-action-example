@@ -11,6 +11,6 @@ jobs:
           operation: 'update'
           classpath: 'example/changelogs'
           changeLogFile: 'samplechangelog.h2.sql'
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          url: ${{ secrets.URL }}
+          username: liquibase
+          password: password
+          url: jdbc:h2:file:./H2_project/h2tutorial
