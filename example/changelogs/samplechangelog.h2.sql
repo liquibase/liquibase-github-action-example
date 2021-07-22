@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset your.name:1
+--changeset MGS_3.0.2_2020-03-02:01
 --rollback DROP TABLE person;
 create table person (
     id int primary key,
@@ -10,7 +10,7 @@ create table person (
     city varchar(30)
 )
 
---changeset your.name:2
+--changeset MGS_3.0.2_2020-03-02:02
 --rollback DROP TABLE company;
 create table company (
     id int primary key,
