@@ -28,19 +28,26 @@ CREATE TABLE yourname (
     name varchar(50) not null
 )
 ```
+4. Add the the database username, password and url to your [GitHub Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).  The values to use are in `example/changelogs/configurationValues.txt`
 
-4. Add, commit and push your changes to GitHub.
+5. Add, commit and push your changes to GitHub.
 ```bash
 git add example/changelogs/samplechangelog.h2.sql
 git commit -m "yourname: Adding new changeset for example"
 git push origin <your_branch_name>
 ```
-5. Your commit triggers a build in GitHub and executes Liquibase update!
+6. Your commit triggers a build in GitHub and executes Liquibase update!
 
  `https://github.com/<YOURFORK>/liquibase-github-action-example/actions`
  
 
  If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
+
+# Additional Examples
+ In addition to the default docker-based example included in the "example" folder this repository also contains additional examples in the "extra" folder.
+ These pertain to various non-docker build systems such as Gradle, NodeJS and Maven, and also showcase a second docker example that doesn't use the official Liquibase action. While the official GitHub Action is the preferred way of implementing docker-based workflows, there may be use-cases requiring custom container images from custom registries. The extra docker example illustrates how this can be done.
+
+ Corresponding GitHub Action workflow (.yml) files for all extra examples can be found in the .github/workflows directory and they must be explicitly enabled for testing.
 
  # Troubleshooting
  * If your build fails due to a validation error, verify that your changeset author and ID are unique in the changelog. This is the `changeset yourname:yourname1`, where the left side is your author and the right is the changeset ID.
