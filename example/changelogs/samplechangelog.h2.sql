@@ -20,6 +20,17 @@ create table company (
     city varchar(30)
 )
 
+--changeset your.name:3
+--rollback DROP TABLE prueba;
+create table prueba (
+    id int primary key,
+    zname varchar(50) not null,
+    zaddress1 varchar(50),
+    zaddress2 varchar(50),
+    zcity varchar(30)
+)
+
+
 --changeset other.dev:3
 --rollback ALTER TABLE person DROP COLUMN country;
 alter table person add column country varchar(2)
