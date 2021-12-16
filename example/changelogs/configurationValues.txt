@@ -2,7 +2,7 @@
 
 logLevel: info
 changeLogFile: db.changelog-master.yaml
-url: jdbc:postgresql://localhost:5433/localDatabase
-username: localUser
-password: localPassword
+url: jdbc:postgresql://pgsh-logreversa.privatelink.postgres.database.azure.com:5432/db_des_logreversa?sslmode=require
+username: svc_logreversa_hlg@pgsh-logreversa
+password: Qv2SMJPrN4bmAi48DCJQX
 a:a
