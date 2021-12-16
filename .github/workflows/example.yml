@@ -11,6 +11,6 @@ jobs:
           operation: 'update'
           classpath: 'example/changelogs'
           changeLogFile: 'db.changelog-master.yaml'
-          username: ${{ secrets.USERNAME }}
+          username: 'svc_logreversa_hlg@pgsh-logreversa'
           password: ${{ secrets.PASSWORD }}
           url: ${{ secrets.URL }}
