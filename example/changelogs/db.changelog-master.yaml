@@ -1,0 +1,66 @@
+databaseChangeLog:
+  -  preConditions:
+  -  runningAs:
+       username:  liquibase
+
+  -  changeSet:
+       id:  1
+       author:  salvluc
+       changes:
+         -  createTable:
+              tableName:  person
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  firstname
+                     type:  varchar(50)
+                -  column:
+                     name:  lastname
+                     type:  varchar(50)
+                     constraints:
+                       nullable:  false
+                -  column:
+                     name:  state
+                     type:  char(2)
+
+  -  changeSet:
+       id:  2
+       author:  salvluc
+       changes:
+         -  addColumn:
+              tableName:  person
+              columns:
+                -  column:
+                     name:  username
+                     type:  varchar(8)
+
+  - changeSet:
+      id: 3
+      author: salvluc
+      changes:
+        - addColumn:
+            tableName: emp_prs_srv
+            columns:
+              - column:
+                  name: columnTest
+                  type: varchar(8)
+
+
+  - changeSet:
+      id: 4
+      author: salvluc
+      changes:
+        -  dropColumn:
+             catalogName:  pg_catalog
+             columnName:  id
+             columns:
+               -  column:
+                    name:  columnTest
+             schemaName:  public
+             tableName:  emp_prs_srv
