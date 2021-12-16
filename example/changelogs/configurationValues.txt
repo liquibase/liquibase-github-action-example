@@ -5,3 +5,4 @@ changeLogFile: db.changelog-master.yaml
 url: jdbc:postgresql://localhost:5433/localDatabase
 username: localUser
 password: localPassword
+a:a
