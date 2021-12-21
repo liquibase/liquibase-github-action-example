@@ -52,15 +52,15 @@ databaseChangeLog:
                   type: varchar(8)
 
 
-  - changeSet:
-      id: 4
-      author: salvluc
-      changes:
-        -  dropColumn:
-             catalogName:  pg_catalog
-             columnName:  id
-             columns:
-               -  column:
-                    name:  columnTest
-             schemaName:  public
-             tableName:  emp_prs_srv
+#  - changeSet:
+#      id: 4
+#      author: salvluc
+#      changes:
+#        -  dropColumn:
+#             catalogName:  pg_catalog
+#             columnName:  id
+#             columns:
+#               -  column:
+#                    name:  columnTest
+#             schemaName:  public
+#             tableName:  emp_prs_srv
