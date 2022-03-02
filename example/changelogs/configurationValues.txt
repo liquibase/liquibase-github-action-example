@@ -2,6 +2,6 @@
 
 logLevel: info
 changeLogFile: samplechangelog.h2.sql
-url: jdbc:h2:file:./H2_project/h2tutorial
-username: liqubase
+url: jdbc:h2:file:./h2tutorial
+username: liquibase
 password: password
