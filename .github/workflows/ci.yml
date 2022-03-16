@@ -1,0 +1,21 @@
+name: Liquibase CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-liquibase-action:
+    runs-on: ubuntu-latest
+    name: Test Liquibase Action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: liquibase/liquibase-github-action@v2
+        with:
+          operation: "updateSQL"
+          classpath: "example/changelogs"
+          changeLogFile: "samplechangelog.h2.sql"
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          url: ${{ secrets.URL }}
