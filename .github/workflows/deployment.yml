@@ -3,17 +3,25 @@ name: Liquibase Deployment
 on:
   push:
     branches:
-      - test-diff
+      - main
 
 jobs:
-  test-liquibase-action:
+  deploy:
     runs-on: ubuntu-latest
-    name: Test Liquibase Action
+    name: Deployment
     steps:
       - uses: actions/checkout@v2
       - uses: liquibase/liquibase-github-action@v2
         with:
           operation: "update"
+          classpath: "example/changelogs"
+          changeLogFile: "samplechangelog.h2.sql"
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          url: ${{ secrets.URL }}
+      - uses: liquibase/liquibase-github-action@v2
+        with:
+          operation: "status"
           classpath: "example/changelogs"
           changeLogFile: "samplechangelog.h2.sql"
           username: ${{ secrets.USERNAME }}
