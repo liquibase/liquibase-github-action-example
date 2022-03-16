@@ -1,4 +1,9 @@
-on: [push]
+name: Liquibase Deployment
+
+on:
+  push:
+    branches:
+      - test-diff
 
 jobs:
   test-liquibase-action:
@@ -8,9 +13,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: liquibase/liquibase-github-action@v2
         with:
-          operation: 'update'
-          classpath: 'example/changelogs'
-          changeLogFile: 'samplechangelog.h2.sql'
+          operation: "update"
+          classpath: "example/changelogs"
+          changeLogFile: "samplechangelog.h2.sql"
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           url: ${{ secrets.URL }}
