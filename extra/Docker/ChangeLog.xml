@@ -8,5 +8,5 @@
 		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
 		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
 		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.0.xsd" changeLogId="695f6cfc-2cd9-43df-a393-2029aa6144f3">
-    <includeAll  path="sql"/>  
+    <includeAll  path="./extra/Docker/sql"/>  
 </databaseChangeLog>
