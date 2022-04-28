@@ -19,7 +19,7 @@ jobs:
     - name: Run 'Liquibase status' in a Docker Container	    
       uses: docker://liquibase/liquibase:latest
       with:
-        args: --url="jdbc:h2:mem:liquibase_dev" --changeLogFile=./extra/Docker/ChangeLog.xml --username=admin --password=password status --verbose
+        args: --url="jdbc:h2:mem:liquibase_dev" --changeLogFile=./extra/Docker/ChangeLog.xml --username=admin --password=password --logLevel=debug status --verbose
     
     - name: Run 'Liquibase update' in a Docker Container
       uses: docker://liquibase/liquibase:latest
