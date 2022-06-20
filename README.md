@@ -44,8 +44,8 @@ git push origin <your_branch_name>
  If you want to try with your own changelog and database, you can make a pull request against this repository with your desired operation, changeLogFile, database username, database password, and database jdbc url.
 
 # Additional Examples
- In addition to the default docker-based example included in the "example" folder this repository also contains additional examples in the "extra" folder.
- These pertain to various non-docker build systems such as Gradle, NodeJS and Maven, and also showcase a second docker example that doesn't use the official Liquibase action. While the official GitHub Action is the preferred way of implementing docker-based workflows, there may be use-cases requiring custom container images from custom registries. The extra docker example illustrates how this can be done.
+ In addition to the default Docker-based example included in the "example" folder this repository also contains additional examples in the "extra" folder.
+ These pertain to various non-Docker build systems such as Gradle, NodeJS and Maven, and also showcase a second Docker example that doesn't use the official Liquibase action. While the official GitHub Action is the preferred way of implementing Docker-based workflows, there may be use-cases requiring custom container images from custom registries. The extra Docker example illustrates how this can be done.
 
  Corresponding GitHub Action workflow (.yml) files for all extra examples can be found in the .github/workflows directory and they must be explicitly enabled for testing.
 
@@ -59,5 +59,5 @@ Get certified courses at https://learn.liquibase.com
 Get support at https://liquibase.com/support         
 
 
-Copyright 2020 Datical, Inc. All rights reserved. The program is subject to the 
+Copyright 2021 Liquibase Inc. All rights reserved. Liquibase is a registered trademark of Liquibase Inc. The program is subject to the 
 license agreement, copyright, trademark, patent, and other laws.
