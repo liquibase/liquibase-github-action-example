@@ -2,6 +2,8 @@
 
 # Example Liquibase Github Action
 
+# Example Liquibase Github Action
+
 Liquibase Github Action is the official Liquibase plugin for Github Actions. The plugin supports the most useful Liquibase commands for automation. These commands are update, updateCount, tag, updateToTag, rollback, rollbackCount, rollbackToDate, updateSQL, futureRollbackSQL, status, history and diff. 
 
 Liquibase Github Action Repository : https://github.com/liquibase/liquibase-github-action
