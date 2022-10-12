@@ -2,6 +2,6 @@
 
 logLevel: info
 changeLogFile: samplechangelog.h2.sql
-url: jdbc:h2:file:./h2tutorial
-username: liquibase
-password: password
+url: jdbc:sqlserver://parteyserver.database.windows.net:1433;database=parteydb;user=saadmin@parteyserver;password=InfoInfo@2022;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+username: manish
+password: InfoInfo@2022
