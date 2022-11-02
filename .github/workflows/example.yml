@@ -5,12 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Test Liquibase Action
     steps:
-      - uses: actions/checkout@v2
-      - uses: liquibase/liquibase-github-action@v2
+      - uses: actions/checkout@v3
+      - uses: liquibase-github-actions/update@v4.17.0
         with:
-          operation: 'update'
           classpath: 'example/changelogs'
-          changeLogFile: 'samplechangelog.h2.sql'
+          changelogFile: 'samplechangelog.h2.sql'
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           url: ${{ secrets.URL }}
