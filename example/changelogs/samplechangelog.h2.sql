@@ -1,8 +1,8 @@
 --liquibase formatted sql
 
---changeset your.name:1
---rollback DROP TABLE person;
-create table person (
+--changeset Juan
+--rollback DROP TABLE test1;
+create table test1 (
     id int primary key,
     name varchar(50) not null,
     address1 varchar(50),
