@@ -31,3 +31,10 @@ alter table person add column state varchar(2)
 --changeset other.dev:5
 --rollback ALTER TABLE company DROP COLUMN country;
 alter table company add column country varchar(2)
+
+--changeset davide:davide1
+--rollback DROP TABLE yourname;
+CREATE TABLE davide (
+id int primary key,
+name varchar(50) not null,
+)
