@@ -20,7 +20,7 @@ create table company (
     city varchar(30)
 )
 
---changeset other.dev:3
+--changeset jai.dev:3
 --rollback ALTER TABLE person DROP COLUMN country;
 alter table person add column country varchar(2)
 
