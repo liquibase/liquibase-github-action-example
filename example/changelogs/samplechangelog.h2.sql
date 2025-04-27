@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset your.name:1
+--changeset jai:1
 --rollback DROP TABLE person;
 create table person (
     id int primary key,
@@ -10,7 +10,7 @@ create table person (
     city varchar(30)
 )
 
---changeset your.name:2
+--changeset jai:2
 --rollback DROP TABLE company;
 create table company (
     id int primary key,
@@ -20,7 +20,7 @@ create table company (
     city varchar(30)
 )
 
---changeset other.dev:3
+--changeset jai.dev:3
 --rollback ALTER TABLE person DROP COLUMN country;
 alter table person add column country varchar(2)
 
